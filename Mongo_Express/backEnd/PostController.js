@@ -33,8 +33,8 @@ class PostController {
 
   async update(req, res) {
     try {
-      const updatePost = await PostService.update(req.body)
-      return res.json(updatePost)
+      const updatedPost = await PostService.update(req.body)
+      return res.json(updatedPost)
     } catch (e) {
       res.status(500).json(e.message)
     }

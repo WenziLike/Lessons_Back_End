@@ -4,7 +4,7 @@ import router from './backEnd/router.js'
 import fileUpload from 'express-fileupload'
 /* ================================================================= */
 
-const PORT = 6060 // 1 прописал порт сервера
+const PORT = 9090 // 1 прописал порт сервера
 const DB_URL = `mongodb+srv://slavamur:user@cluster0.gtnh3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 const app = express() // 2 инициализация EXPRESS библиотеки
 /* ================================================================= */
