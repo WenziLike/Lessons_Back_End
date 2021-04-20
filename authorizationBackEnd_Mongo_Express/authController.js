@@ -3,7 +3,7 @@ const Role = require('./models/Role')
 const bcrypt = require('bcrypt')
 const {validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
-const {secret} = require('/config')
+const {secret} = require('./config')
 
 
 const generateAccessToken = (id, roles) => {
@@ -11,7 +11,7 @@ const generateAccessToken = (id, roles) => {
         id,
         roles
     }
-    return jwt.sign(payload, secret, {expiresIn: '24h'})
+    return jwt.sign(payload, secret, {expiresIn: '24h'}) // указываем сколько будет жить токкен
 }
 
 class AuthController {
@@ -64,8 +64,10 @@ class AuthController {
 
     async getUsers(req, res) {
         try {
-            res.json("server at work!!!")
+            const users = await User.find()
+            res.json(users)
         } catch (e) {
+            console.log(e)
         }
     }
 }
