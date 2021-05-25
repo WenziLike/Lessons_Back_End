@@ -4,7 +4,7 @@ import fileService from './fileService.js'
 class PostService {
     async create(post, picture) {
         const fileName = fileService.saveFile(picture)
-        const createdPost = await Post.create({...post, picture: fileName})
+        const createdPost = await Post.create({ ...post, picture: fileName })
         return createdPost // возвращаем созданный пост
     }
 
@@ -25,7 +25,7 @@ class PostService {
         if (!post._id) {
             throw new Error('No ID specified')
         }
-        const updatedPost = await Post.findByIdAndUpdate(post._id, post, {new: true})
+        const updatedPost = await Post.findByIdAndUpdate(post._id, post, { new: true })
         return updatedPost
     }
 
