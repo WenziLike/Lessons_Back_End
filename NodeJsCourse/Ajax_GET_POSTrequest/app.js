@@ -16,7 +16,7 @@ http.createServer((request, response) => {
         response.end('go go go')
     } else {
         /**
-         * POST -> получить обработать
+         * POST -> обработать
          */
 
         let body = ''
