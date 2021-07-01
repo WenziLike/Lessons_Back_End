@@ -7,7 +7,7 @@ const createCsvWriter = require('csv-writer').createObjectCsvWriter;
 fs.writeFile('one.txt', 'work', err => {
     if (err) console.log('Error')
 })
-
+//todo Case 1. Записываем json file
 /**
  * Case 1. Записываем json file
  */
@@ -22,13 +22,13 @@ const man = {
 fs.writeFile('one.json', JSON.stringify(man), err => {
     if (err) console.log('Error')
 })
-
+//todo Case 2. Читаем json file
 /**
  * Case 2. Читаем json file
  */
 
 console.log(student)
-
+//todo Case 3. Читаем CSV file
 /**
  * Case 3. Читаем CSV file
  */
@@ -40,6 +40,8 @@ const results = []
 //         console.log(results)
 //     })
 
+
+//todo Case 4. Пишем CSV file
 /**
  * Case 4. Пишем CSV file
  */
